@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PlasmaShoot4.wav-d6cfdc5a5b2b44a45b670d39b1eff97a.sample"
+
+[deps]
+
+source_file="res://Resources/SFX/PlasmaShoot4.wav"
+dest_files=[ "res://.import/PlasmaShoot4.wav-d6cfdc5a5b2b44a45b670d39b1eff97a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/MissileExplosion.wav-38736030d3331cab0fd97e4ff1aa6c79.sample"
+
+[deps]
+
+source_file="res://Resources/SFX/MissileExplosion.wav"
+dest_files=[ "res://.import/MissileExplosion.wav-38736030d3331cab0fd97e4ff1aa6c79.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

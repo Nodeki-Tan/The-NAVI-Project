@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/LaserExplosion.wav-d7f3bc4d5efcf55d0afb01d3c508ccc9.sample"
+
+[deps]
+
+source_file="res://Resources/SFX/LaserExplosion.wav"
+dest_files=[ "res://.import/LaserExplosion.wav-d7f3bc4d5efcf55d0afb01d3c508ccc9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
