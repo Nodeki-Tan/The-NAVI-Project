@@ -62,6 +62,7 @@
     <Compile Include="Scripts\Core\MapCore\MapCore.cs" />
     <Compile Include="Scripts\Entities\NAVI\Module.cs" />
     <Compile Include="Scripts\Entities\NAVI\NAVI.cs" />
+    <Compile Include="Scripts\Entities\player\PlayerCredentials.cs" />
     <Compile Include="Scripts\Entities\player\PlayerEntity.cs" />
     <Compile Include="Scripts\Managers\AssetManager.cs" />
     <Compile Include="Scripts\Managers\ClientMessageManager.cs" />
