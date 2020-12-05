@@ -14,7 +14,7 @@ public class PlayerEntity : NetworkEntity
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready(){
-        //if (IsNetworkMaster())
+        // for setting the mouse invisible and stuck in the window
         //    Input.SetMouseMode(Input.MouseMode.Captured);
     }
 

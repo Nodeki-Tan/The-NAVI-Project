@@ -1,0 +1,56 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/entities/player/PlayerEntity.cs" type="Script" id=1]
+[ext_resource path="res://Assets/Material/3dSprite.tres" type="Material" id=2]
+[ext_resource path="res://Assets/Sprites/manequin.png" type="Texture" id=3]
+[ext_resource path="res://Objects/UINode.tscn" type="PackedScene" id=4]
+
+[sub_resource type="CapsuleShape" id=1]
+radius = 0.102193
+height = 0.25
+
+[sub_resource type="Animation" id=2]
+loop = true
+step = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 3, 4 ]
+}
+
+[node name="Player" type="KinematicBody"]
+transform = Transform( 4, 0, 0, 0, 4, 0, 0, 0, 4, 0, 0, 0 )
+script = ExtResource( 1 )
+
+[node name="Head" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
+
+[node name="Sprite" type="Sprite3D" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.280421, 0 )
+material_override = ExtResource( 2 )
+transparent = false
+texture = ExtResource( 3 )
+hframes = 5
+frame = 3
+
+[node name="RayCast" type="RayCast" parent="."]
+transform = Transform( 1, 0, -3.1129e-22, 0, 1, 1.52466e-20, -3.1129e-22, 1.52466e-20, 1, 0, 0.025, 0 )
+enabled = true
+cast_to = Vector3( 0, -0.15, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape" parent="."]
+transform = Transform( -1.62921e-07, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -1.62921e-07, 7.12149e-15, 0, 0.229195, 0 )
+shape = SubResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "IdleRight"
+anims/IdleRight = SubResource( 2 )
+
+[node name="UINode" parent="." instance=ExtResource( 4 )]
