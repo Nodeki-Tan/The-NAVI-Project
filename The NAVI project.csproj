@@ -58,29 +58,29 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scripts\Managers\AssetManager.cs" />
-    <Compile Include="Scripts\Managers\ClientMessageManager.cs" />
-    <Compile Include="Scripts\Managers\ServerMessageManager.cs" />
-    <Compile Include="Scripts\Managers\ModuleManager.cs" />
-    <Compile Include="Scripts\Managers\NetworkManager.cs" />
-    <Compile Include="Scripts\Managers\ProgramManager.cs" />
-    <Compile Include="Scripts\Managers\WorldManager.cs" />
-    <Compile Include="Scripts\Utils\TimeUtils.cs" />
-    <Compile Include="Scripts\Utils\UtilsBox.cs" />
-    <Compile Include="Scripts\Networking\KinematicPuppetEntity.cs" />
-    <Compile Include="Scripts\Networking\NetworkEntity.cs" />
-    <Compile Include="Scripts\Networking\PuppetEntity.cs" />
-    <Compile Include="Scripts\Networking\PuppetPlayer.cs" />
-    <Compile Include="Scripts\Menus\MainMenu.cs" />
-    <Compile Include="Scripts\Menus\MainMenuController.cs" />
-    <Compile Include="Scripts\Entities\Ladder.cs" />
-    <Compile Include="Scripts\Entities\Player\PlayerCredentials.cs" />
-    <Compile Include="Scripts\Entities\Player\PlayerEntity.cs" />
-    <Compile Include="Scripts\Entities\NAVI\NAVI.cs" />
-    <Compile Include="Scripts\Entities\NAVI\NAVIProgram.cs" />
-    <Compile Include="Scripts\Entities\NAVI\Module.cs" />
-    <Compile Include="Scripts\Core\GameCore.cs" />
-    <Compile Include="Scripts\Core\MapCore\MapCore.cs" />
+    <Compile Include="Scripts\CSharp\Managers\AssetManager.cs" />
+    <Compile Include="Scripts\CSharp\Managers\ClientMessageManager.cs" />
+    <Compile Include="Scripts\CSharp\Managers\ServerMessageManager.cs" />
+    <Compile Include="Scripts\CSharp\Managers\ModuleManager.cs" />
+    <Compile Include="Scripts\CSharp\Managers\NetworkManager.cs" />
+    <Compile Include="Scripts\CSharp\Managers\ProgramManager.cs" />
+    <Compile Include="Scripts\CSharp\Managers\WorldManager.cs" />
+    <Compile Include="Scripts\CSharp\Utils\TimeUtils.cs" />
+    <Compile Include="Scripts\CSharp\Utils\UtilsBox.cs" />
+    <Compile Include="Scripts\CSharp\Entities\Network\2D\KinematicPuppetEntity.cs" />
+    <Compile Include="Scripts\CSharp\Entities\Network\2D\NetworkEntity.cs" />
+    <Compile Include="Scripts\CSharp\Entities\Network\2D\PuppetEntity.cs" />
+    <Compile Include="Scripts\CSharp\Entities\Network\2D\PuppetPlayer.cs" />
+    <Compile Include="Scripts\CSharp\Menus\MainMenu.cs" />
+    <Compile Include="Scripts\CSharp\Menus\MainMenuController.cs" />
+    <Compile Include="Scripts\CSharp\Entities\Ladder.cs" />
+    <Compile Include="Scripts\CSharp\Data\Player\PlayerCredentials.cs" />
+    <Compile Include="Scripts\CSharp\Entities\Local\2D\Player\PlayerEntity.cs" />
+    <Compile Include="Scripts\CSharp\Data\NAVI\NAVI.cs" />
+    <Compile Include="Scripts\CSharp\Data\NAVI\NAVIProgram.cs" />
+    <Compile Include="Scripts\CSharp\Data\NAVI\Module.cs" />
+    <Compile Include="Scripts\CSharp\Core\GameCore.cs" />
+    <Compile Include="Scripts\CSharp\Core\MapCore\MapCore.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

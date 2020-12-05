@@ -24,9 +24,13 @@ public class AssetManager : Node
 
     public PackedScene puppetPlayerScene;
 
-    String objectPath = "res://Objects/";
+    String localObjectPath = "res://Objects/Local/";
 
-    String networkObjectPath = "res://Objects/NetworkObjects/";
+    String networkObjectPath = "res://Objects/Network/";
+
+    String Object2DPath = "2D/";
+
+    String Object3DPath = "3D/";
 
     String scenesPath = "res://Scenes/";
 
@@ -37,10 +41,11 @@ public class AssetManager : Node
 	{
 		//load assets
         worldScene =  LoadScene("Maps/World");
-        playerScene = LoadObject("Player");
-        cameraScene = LoadObject("Camera");
 
-        puppetPlayerScene = LoadNetObject("PuppetPlayer");
+        playerScene = LoadLocalObject("Player/Player", true);
+        cameraScene = LoadLocalObject("Player/Camera", true);
+
+        puppetPlayerScene = LoadNetObject("Player/PuppetPlayer", true);
 
 	}
 
@@ -49,14 +54,20 @@ public class AssetManager : Node
 		
 	}
 
-    PackedScene LoadObject(String name)
+    PackedScene LoadLocalObject(String name, bool is2D)
     {
-        return (PackedScene)ResourceLoader.Load(objectPath + name + resFormat);
+        if(is2D)
+            return (PackedScene)ResourceLoader.Load(localObjectPath + Object2DPath + name + resFormat);
+        else
+            return (PackedScene)ResourceLoader.Load(localObjectPath + Object3DPath + name + resFormat);
     }
 
-    PackedScene LoadNetObject(String name)
+    PackedScene LoadNetObject(String name, bool is2D)
     {
-        return (PackedScene)ResourceLoader.Load(networkObjectPath + name + resFormat);
+        if(is2D)
+            return (PackedScene)ResourceLoader.Load(networkObjectPath + Object2DPath + name + resFormat);
+        else
+            return (PackedScene)ResourceLoader.Load(networkObjectPath + Object3DPath + name + resFormat);
     }
 
     PackedScene LoadScene(String name)

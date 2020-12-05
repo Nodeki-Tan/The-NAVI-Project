@@ -4,8 +4,9 @@
 [ext_resource path="res://Resources/Textures/Buttons/BasicButtonNormal.png" type="Texture" id=2]
 [ext_resource path="res://Resources/Textures/Buttons/BasicButtonHover.png" type="Texture" id=3]
 [ext_resource path="res://Resources/Textures/Buttons/BasicButtomPressed.png" type="Texture" id=4]
-[ext_resource path="res://Scripts/Menus/GenericWindow.gd" type="Script" id=5]
+[ext_resource path="res://Scripts/GDScript/Menus/GenericWindow.gd" type="Script" id=5]
 [ext_resource path="res://Resources/Fonts/PixelRobot.tres" type="DynamicFontData" id=6]
+
 
 [sub_resource type="DynamicFont" id=1]
 extra_spacing_top = -8
