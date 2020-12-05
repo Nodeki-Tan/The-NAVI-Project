@@ -15,8 +15,8 @@ _global_script_class_icons={
 
 [application]
 
-config/name="UNDERLINGS!!!"
-run/main_scene="res://Scenes/Main.tscn"
+config/name="The NAVI project"
+run/main_scene="res://Scenes/Menus/ServerConnectMenu.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="NAVI"
 boot_splash/use_filter=false

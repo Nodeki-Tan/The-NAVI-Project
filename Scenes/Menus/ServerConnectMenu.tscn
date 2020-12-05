@@ -1,16 +1,16 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Scripts/Menus/MainMenuController.cs" type="Script" id=1]
-[ext_resource path="res://Resources/Fonts/PixelRobot.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Resources/PanelBasic.tres" type="StyleBox" id=3]
+[ext_resource path="res://Resources/PanelBasic.tres" type="StyleBox" id=2]
+[ext_resource path="res://Resources/Fonts/PixelRobot.ttf" type="DynamicFontData" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 32
-font_data = ExtResource( 2 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFont" id=2]
 size = 32
-font_data = ExtResource( 2 )
+font_data = ExtResource( 3 )
 
 [node name="main_menu" type="Node2D"]
 scale = Vector2( 0.36, 0.4 )
@@ -26,7 +26,7 @@ __meta__ = {
 }
 
 [node name="panel_container" type="PanelContainer" parent="menu_container"]
-custom_styles/panel = ExtResource( 3 )
+custom_styles/panel = ExtResource( 2 )
 
 [node name="vbox_container" type="VBoxContainer" parent="menu_container/panel_container"]
 margin_right = 126.0
@@ -76,7 +76,7 @@ __meta__ = {
 }
 
 [node name="panel_container" type="PanelContainer" parent="join_container"]
-custom_styles/panel = ExtResource( 3 )
+custom_styles/panel = ExtResource( 2 )
 
 [node name="vbox_container" type="VBoxContainer" parent="join_container/panel_container"]
 margin_right = 268.0
@@ -164,7 +164,7 @@ margin_right = 283.653
 margin_bottom = 131.815
 
 [node name="panel_container" type="PanelContainer" parent="host_container"]
-custom_styles/panel = ExtResource( 3 )
+custom_styles/panel = ExtResource( 2 )
 
 [node name="vbox_container" type="VBoxContainer" parent="host_container/panel_container"]
 margin_right = 268.0
@@ -231,7 +231,7 @@ margin_right = 283.653
 margin_bottom = 131.815
 
 [node name="panel_container" type="PanelContainer" parent="lobby_container"]
-custom_styles/panel = ExtResource( 3 )
+custom_styles/panel = ExtResource( 2 )
 
 [node name="vbox_container" type="VBoxContainer" parent="lobby_container/panel_container"]
 margin_right = 141.0
