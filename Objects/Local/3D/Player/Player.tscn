@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Scripts/entities/player/PlayerEntity.cs" type="Script" id=1]
-[ext_resource path="res://Assets/Material/3dSprite.tres" type="Material" id=2]
-[ext_resource path="res://Assets/Sprites/manequin.png" type="Texture" id=3]
-[ext_resource path="res://Objects/UINode.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/CSharp/Entities/Local/3D/Player/PlayerEntity.cs" type="Script" id=1]
+[ext_resource path="res://Resources/Material/3dSprite.tres" type="Material" id=2]
+[ext_resource path="res://Resources/Sprites/manequin.png" type="Texture" id=3]
+[ext_resource path="res://Objects/UI/UINode.tscn" type="PackedScene" id=4]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.102193
@@ -33,7 +33,7 @@ script = ExtResource( 1 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
 
 [node name="Sprite" type="Sprite3D" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.280421, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.252617, 0 )
 material_override = ExtResource( 2 )
 transparent = false
 texture = ExtResource( 3 )

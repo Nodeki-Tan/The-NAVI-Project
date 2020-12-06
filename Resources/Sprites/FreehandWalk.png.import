@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/FreehandWalk.png-9ffcba18da1f786b5d263c023ed641ae.stex"
+path="res://.import/FreehandWalk.png-af745968118f178a3ae310f0c53cfeeb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Resources/Textures/FreehandWalk.png"
-dest_files=[ "res://.import/FreehandWalk.png-9ffcba18da1f786b5d263c023ed641ae.stex" ]
+source_file="res://Resources/Sprites/FreehandWalk.png"
+dest_files=[ "res://.import/FreehandWalk.png-af745968118f178a3ae310f0c53cfeeb.stex" ]
 
 [params]
 
