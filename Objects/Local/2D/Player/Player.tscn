@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Resources/Textures/FreehandWalk.png" type="Texture" id=1]
+[ext_resource path="res://Resources/Sprites/FreehandWalk.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/CSharp/Entities/Local/2D/Player/PlayerEntity.cs" type="Script" id=2]
 [ext_resource path="res://Objects/Local/2D/Player/Camera.tscn" type="PackedScene" id=3]
 

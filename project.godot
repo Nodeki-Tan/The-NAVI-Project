@@ -16,11 +16,12 @@ _global_script_class_icons={
 [application]
 
 config/name="The NAVI project"
-run/main_scene="res://Scenes/Menus/ServerConnectMenu.tscn"
+run/main_scene="res://Scenes/Menus/LoadingScreen.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="NAVI"
+boot_splash/image="res://Resources/Textures/BlackBack.png"
 boot_splash/use_filter=false
-boot_splash/bg_color=Color( 0.945098, 0.94902, 0.854902, 1 )
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
 config/icon="res://icon.png"
 
 [autoload]
