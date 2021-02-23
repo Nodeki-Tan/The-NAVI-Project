@@ -17,7 +17,7 @@ func _ready():
 #	pass
 
 
-func _on_LoginButton_pressed():
+func _on_RegisterButton_pressed():
 	# Check username for errors
 	username = usernameField.text
 	
@@ -38,14 +38,14 @@ func _on_LoginButton_pressed():
 	# Clear error (if any)
 	errorLabel.text = ""
 	
-	# Until now there is no errors so we can continue and load
-	# a file to check the data down here and try to login
+	# Until now there is no errors so we can continue and save
+	# to a file as credentials for the new user
 	
 	# Simple print debug test
-	print(username + " tried to login with password " + password)
+	print(username + " tried to Register with password " + password)
 	
-	var data = get_node("/root/AssetManager").call("loadDataFile")
+	get_node("/root/AssetManager").call("createDataFile", username, [username, password])
 	
-	print(data[1])
+	print(username + " successfully registered!")
 	
 	pass # Replace with function body.

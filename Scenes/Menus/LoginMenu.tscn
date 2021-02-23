@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Objects/UI/GenericWindow.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Scripts/GDScript/Menus/LoginWindow.gd" type="Script" id=2]
@@ -10,9 +10,11 @@
 [ext_resource path="res://Resources/Textures/UIBase.png" type="Texture" id=8]
 [ext_resource path="res://Resources/Textures/Buttons/BasicButtonNormal.png" type="Texture" id=9]
 [ext_resource path="res://Resources/Textures/SimpleWindowB.png" type="Texture" id=10]
+[ext_resource path="res://Scripts/GDScript/Menus/WelcomeWindow.gd" type="Script" id=11]
+[ext_resource path="res://Scripts/GDScript/Menus/RegisterWindow.gd" type="Script" id=12]
 
 [sub_resource type="DynamicFont" id=1]
-extra_spacing_top = -8
+extra_spacing_top = -12
 extra_spacing_bottom = -8
 font_data = ExtResource( 5 )
 
@@ -37,6 +39,10 @@ extra_spacing_top = -4
 font_data = SubResource( 3 )
 
 [sub_resource type="StyleBoxTexture" id=5]
+content_margin_left = 6.0
+content_margin_right = 0.0
+content_margin_top = 0.0
+content_margin_bottom = 0.0
 texture = ExtResource( 10 )
 region_rect = Rect2( 0, 0, 24, 10 )
 margin_left = 2.99781
@@ -45,6 +51,7 @@ margin_top = 3.1477
 margin_bottom = 3.1477
 
 [node name="LoginMenu" type="Node2D"]
+script = ExtResource( 11 )
 
 [node name="ColorRect" type="ColorRect" parent="."]
 margin_right = 320.0
@@ -57,9 +64,10 @@ __meta__ = {
 [node name="NAVIBack" parent="." instance=ExtResource( 3 )]
 
 [node name="LoginWindow" type="NinePatchRect" parent="."]
-margin_left = 48.0
+visible = false
+margin_left = 107.0
 margin_top = 24.0
-margin_right = 152.0
+margin_right = 211.0
 margin_bottom = 160.0
 texture = ExtResource( 8 )
 region_rect = Rect2( 0, 0, 26, 29 )
@@ -124,7 +132,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="UsernameField" type="TextEdit" parent="LoginWindow"]
+[node name="UsernameField" type="LineEdit" parent="LoginWindow"]
 margin_left = 16.0
 margin_top = 40.0
 margin_right = 88.0
@@ -132,11 +140,6 @@ margin_bottom = 53.0
 custom_styles/normal = SubResource( 2 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.772549, 0.701961, 0.572549, 1 )
-text = "Username"
-caret_moving_by_right_click = false
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="Password" type="RichTextLabel" parent="LoginWindow"]
 margin_left = 16.0
@@ -151,7 +154,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="PasswordField" type="TextEdit" parent="LoginWindow"]
+[node name="PasswordField" type="LineEdit" parent="LoginWindow"]
 margin_left = 16.0
 margin_top = 72.0
 margin_right = 88.0
@@ -159,8 +162,6 @@ margin_bottom = 85.0
 custom_styles/normal = SubResource( 2 )
 custom_fonts/font = SubResource( 4 )
 custom_colors/font_color = Color( 0.772549, 0.701961, 0.572549, 1 )
-text = "Password"
-caret_moving_by_right_click = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -175,24 +176,242 @@ custom_styles/pressed = SubResource( 5 )
 custom_styles/focus = SubResource( 2 )
 custom_styles/disabled = SubResource( 2 )
 custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.772549, 0.701961, 0.572549, 1 )
+custom_colors/font_color = Color( 0.772549, 0.701961, 0.572549, 1 )
+custom_colors/font_color_hover = Color( 0.772549, 0.701961, 0.572549, 1 )
+custom_colors/font_color_pressed = Color( 0.772549, 0.701961, 0.572549, 1 )
+text = "Login "
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="LoginButtonText" type="RichTextLabel" parent="LoginWindow"]
-margin_left = 42.0
-margin_top = 116.0
-margin_right = 76.0
-margin_bottom = 124.0
+[node name="ErrorLabel" type="Label" parent="LoginWindow"]
+margin_left = 7.0
+margin_top = 99.0
+margin_right = 99.0
+margin_bottom = 112.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.772549, 0.701961, 0.572549, 1 )
+align = 1
+valign = 1
+autowrap = true
+max_lines_visible = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RegisterWindow" type="NinePatchRect" parent="."]
+visible = false
+margin_left = 107.0
+margin_top = 24.0
+margin_right = 211.0
+margin_bottom = 160.0
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 26, 29 )
+patch_margin_left = 11
+patch_margin_top = 13
+patch_margin_right = 8
+patch_margin_bottom = 8
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+windowName = "User Register"
+
+[node name="CloseButton" type="TextureButton" parent="RegisterWindow"]
+margin_left = 3.0
+margin_top = 3.0
+margin_right = 10.0
+margin_bottom = 10.0
+texture_normal = ExtResource( 9 )
+texture_pressed = ExtResource( 6 )
+texture_hover = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WindowNameText" type="RichTextLabel" parent="RegisterWindow"]
+margin_left = 12.0
+margin_top = 3.0
+margin_right = 128.0
+margin_bottom = 10.0
 custom_fonts/normal_font = SubResource( 1 )
 custom_colors/default_color = Color( 0.772549, 0.701961, 0.572549, 1 )
-text = "Login"
 scroll_active = false
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="UpdatesWindow" parent="." instance=ExtResource( 1 )]
-margin_left = 200.0
-margin_top = 24.0
-margin_right = 304.0
-margin_bottom = 80.0
-windowName = "Updates"
-[connection signal="pressed" from="LoginWindow/CloseButton" to="LoginWindow" method="_on_Button_pressed"]
+[node name="LoginTitle" type="RichTextLabel" parent="RegisterWindow"]
+margin_left = 38.0
+margin_top = 16.0
+margin_right = 66.0
+margin_bottom = 24.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.772549, 0.701961, 0.572549, 1 )
+text = "Register"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Username" type="RichTextLabel" parent="RegisterWindow"]
+margin_left = 16.0
+margin_top = 32.0
+margin_right = 50.0
+margin_bottom = 40.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.772549, 0.701961, 0.572549, 1 )
+text = "Username"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="UsernameField" type="LineEdit" parent="RegisterWindow"]
+margin_left = 16.0
+margin_top = 40.0
+margin_right = 88.0
+margin_bottom = 53.0
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.772549, 0.701961, 0.572549, 1 )
+
+[node name="Password" type="RichTextLabel" parent="RegisterWindow"]
+margin_left = 16.0
+margin_top = 64.0
+margin_right = 50.0
+margin_bottom = 72.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.772549, 0.701961, 0.572549, 1 )
+text = "Password"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PasswordField" type="LineEdit" parent="RegisterWindow"]
+margin_left = 16.0
+margin_top = 72.0
+margin_right = 88.0
+margin_bottom = 85.0
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.772549, 0.701961, 0.572549, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RegisterButton" type="Button" parent="RegisterWindow"]
+margin_left = 24.0
+margin_top = 112.0
+margin_right = 80.0
+margin_bottom = 128.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.772549, 0.701961, 0.572549, 1 )
+custom_colors/font_color = Color( 0.772549, 0.701961, 0.572549, 1 )
+custom_colors/font_color_hover = Color( 0.772549, 0.701961, 0.572549, 1 )
+custom_colors/font_color_pressed = Color( 0.772549, 0.701961, 0.572549, 1 )
+text = "Register "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ErrorLabel" type="Label" parent="RegisterWindow"]
+margin_left = 7.0
+margin_top = 99.0
+margin_right = 99.0
+margin_bottom = 112.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.772549, 0.701961, 0.572549, 1 )
+align = 1
+valign = 1
+autowrap = true
+max_lines_visible = 10
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WelcomeWindow" parent="." instance=ExtResource( 1 )]
+margin_left = 103.0
+margin_top = 32.0
+margin_right = 215.0
+margin_bottom = 152.0
+script = null
+
+[node name="WelcomeTitle" type="RichTextLabel" parent="WelcomeWindow"]
+margin_left = 25.0
+margin_top = 16.0
+margin_right = 89.0
+margin_bottom = 32.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.772549, 0.701961, 0.572549, 1 )
+text = "   Welcome!"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WelcomeTitlep2" type="RichTextLabel" parent="WelcomeWindow/WelcomeTitle"]
+margin_top = 8.0
+margin_right = 64.0
+margin_bottom = 16.0
+custom_fonts/normal_font = SubResource( 1 )
+custom_colors/default_color = Color( 0.772549, 0.701961, 0.572549, 1 )
+text = "Who is the User?"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToLogin" type="Button" parent="WelcomeWindow"]
+margin_left = 25.0
+margin_top = 48.0
+margin_right = 89.0
+margin_bottom = 64.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.772549, 0.701961, 0.572549, 1 )
+custom_colors/font_color = Color( 0.772549, 0.701961, 0.572549, 1 )
+custom_colors/font_color_hover = Color( 0.772549, 0.701961, 0.572549, 1 )
+custom_colors/font_color_pressed = Color( 0.772549, 0.701961, 0.572549, 1 )
+text = "Login "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToRegister" type="Button" parent="WelcomeWindow"]
+margin_left = 25.0
+margin_top = 80.0
+margin_right = 89.0
+margin_bottom = 96.0
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/focus = SubResource( 2 )
+custom_styles/disabled = SubResource( 2 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color_disabled = Color( 0.772549, 0.701961, 0.572549, 1 )
+custom_colors/font_color = Color( 0.772549, 0.701961, 0.572549, 1 )
+custom_colors/font_color_hover = Color( 0.772549, 0.701961, 0.572549, 1 )
+custom_colors/font_color_pressed = Color( 0.772549, 0.701961, 0.572549, 1 )
+text = "Register"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="LoginWindow/CloseButton" to="." method="_on_CloseButton_pressed"]
+[connection signal="pressed" from="LoginWindow/LoginButton" to="LoginWindow" method="_on_LoginButton_pressed"]
+[connection signal="pressed" from="RegisterWindow/CloseButton" to="." method="_on_CloseButton_pressed"]
+[connection signal="pressed" from="RegisterWindow/RegisterButton" to="RegisterWindow" method="_on_RegisterButton_pressed"]
+[connection signal="pressed" from="WelcomeWindow/ToLogin" to="." method="_on_ToLogin_pressed"]
+[connection signal="pressed" from="WelcomeWindow/ToRegister" to="." method="_on_ToRegister_pressed"]

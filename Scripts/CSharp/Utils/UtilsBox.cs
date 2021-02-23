@@ -35,7 +35,7 @@ public class UtilsBox
 
         for (int i = 0; i < contents.Length; i++)
         {
-            GD.Print(contents[i].ToString() + "/n");
+            GD.Print(contents[i].ToString());
         }
 
         string value = string.Join(SEPARATOR, contents);
@@ -102,7 +102,7 @@ public class UtilsBox
 
         for (int i = 0; i < obj.Length; i++)
         {
-            GD.Print(obj[i].ToString() + "/n");
+            GD.Print(obj[i].ToString());
         }
         
         GD.Print("those are the contents of " + saveName + " successfully loaded!");

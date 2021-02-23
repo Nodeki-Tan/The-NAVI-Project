@@ -1,5 +1,6 @@
 using Godot;
 using System;
+using System.Collections.Generic;
 
 public class AssetManager : Node
 {
@@ -74,5 +75,27 @@ public class AssetManager : Node
     {
         return (PackedScene)ResourceLoader.Load(scenesPath + name + resFormat);
     }
+
+    public void createDataFile(string saveName, params object[] list)
+    {
+        object[] data = UtilsBox.ConstructObjectBuffer(list);
+
+        UtilsBox.createDataFile(data, saveName);
+    }
+
+    public String loadDataFile(string saveName)
+    {
+
+        object[] bufferData = UtilsBox.loadDataFile(saveName);
+
+        for (int i = 0; i < bufferData.Length; i++)
+        {
+            //data.Add(bufferData[i]);
+        }
+
+        return "data";
+    }
+
+
 
 }

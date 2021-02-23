@@ -1,7 +1,7 @@
 # The NAVI Project
 
 Repo for the ongoing NAVI game project, no copyright violation intended, this is a cooperative effort by the SEL community
-guided by Nodeki-tan to make a fan game about the NAVI and the Wired.
+guided by Nokki to make a fan game about the NAVI and the Wired.
  
 
 
@@ -51,4 +51,4 @@ moved to other archive
 
 
 
-	SEL community and Nodeki-tan 12/2020, L E T S   A L L   L O V E   L A I N
+	SEL community and Nokki 02/2021, L E T S   A L L   L O V E   L A I N
